@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "{% static 'css/estilo.css' %}">
+    <title>Pagina principal</title>
+</head>
+
+<body>
+    <h1>Usando templates y archivos estáticos</h1> <br><br><br>
+
+    <!--3 imagenes locales-->
+    <div class="contenido">
+        <img src="{% static 'images/cubo_rubik.png' %}" alt="cubo_rubik" width="300px">
+        <img src="{% static 'images/musica.png' %}" alt="musica" width="300px">
+        <img src="{% static 'images/mando.png' %}" alt="mando" width="300px">
+    </div>
+    <br><br><br>
+    <!--Tabla con 3 interes favoritos-->
+    <table class="tabla">
+        <tr> 
+            <th>Mis 3 intereses favoritos</th>
+        </tr>
+        <tr> 
+            <td>{{ Primer_interes }}</td>
+        </tr>
+        <tr> 
+            <td>{{ Segundo_interes }}</td>
+        </tr>
+        <tr> 
+            <td>{{ Tercer_interes }}</td>
+        </tr>
+    </table>    
+</body>
+
+</html>
